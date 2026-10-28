@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery with category filters and a lightbox viewer.">
+  <title>Frame Gallery | CodeAlpha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Frame Gallery home">
+      <span class="brand-icon">F</span>
+      <span>frame<span class="brand-light">gallery</span></span>
+    </a>
+    <span class="header-label">A VISUAL COLLECTION</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">CODEALPHA · FRONTEND PROJECT 02</p>
+      <h1>Moments, <span>framed.</span></h1>
+      <p class="intro-copy">A little collection of places, details, and moments worth keeping.</p>
+      <div class="intro-rule"><span></span></div>
+    </section>
+
+    <section class="gallery-section" aria-label="Photo gallery">
+      <div class="gallery-toolbar">
+        <div>
+          <h2>Explore the collection</h2>
+          <p id="result-count" aria-live="polite">12 photographs</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter images by category">
+          <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="nature" aria-pressed="false">Nature</button>
+          <button class="filter" data-filter="architecture" aria-pressed="false">Architecture</button>
+          <button class="filter" data-filter="travel" aria-pressed="false">Travel</button>
+        </div>
+      </div>
+      <div id="gallery" class="gallery-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>FRAME GALLERY</span>
+    <span>Built with HTML, CSS &amp; JavaScript</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close" id="close-lightbox" aria-label="Close image viewer">×</button>
+    <button class="lightbox-nav prev" id="prev-image" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption>
+        <div><p id="lightbox-category"></p><h2 id="lightbox-title"></h2></div>
+        <span id="lightbox-index"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav next" id="next-image" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
